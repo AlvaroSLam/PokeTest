@@ -1,33 +1,38 @@
 import React from 'react'
-import axios from 'axios'
 import PokemonList from './components/PokemonList'
+import {Switch, Route} from "react-router-dom"
+import PokeCard from './components/PokeCard'
 
 
 class App extends React.Component {
 
-  state = {
-    pokemon: []
-  }
-
-  componentDidMount(){
-    axios.get('https://pokeapi.co/api/v2/pokemon/')
-      .then((result) =>{
-        this.setState({
-          pokemon: result.data.results
-        })        
-      })
-      .catch((err) =>{
-        console.log(err)
-      })
-  }
-
   render(){
     return (
-      <div>
-        <h1>PokeTest</h1>
-        <PokemonList pokemon={this.state.pokemon} />
+      <div className='background'>
+        {/* <div className='black'>
+        <div></div>
+        <div></div>
+        </div> */}
+      
+        {/* <div className='red'>
+          <div></div>
+          <div></div>
+        </div> */}
+        
+      
+        <div className='poke-list'>
+          <Route exact path='/' component={PokemonList}/>
+        </div>
+
+        <Switch>          
+          <Route path='/pokemon/:pokemonId' render={(routeProps) =>{
+            return <PokeCard />
+          }}/>
+        </Switch>
+
       </div>
     );
+    
   }
  
 }

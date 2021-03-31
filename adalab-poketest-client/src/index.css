@@ -1,13 +1,244 @@
+/*
+GENERAL STYLING
+-> Pikachu Colors
+Yellow: Hex: #FAD61D // RGB: (250, 214, 29)
+Red: Hex: #F62D14 // RGB: (246, 45, 20)
+Orange: Hex: #E19720 // RGB: (225, 151, 32)
+Brown: Hex: #811E09 // RGB: (129, 30, 9)
+Black: Hex: #000000 // RGB: (0, 0, 0)
+/*
+->Card Colors
+Background Gray Cards: Hex: #dfdfdf
+Background White Cards:  Hex: #ffffff
+Background Gray ID: Hex: #ced0c5
+Background Brown Text: #65352b
+*/
+
+
 body {
   margin: 0;
+  padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #FAD61D;
+  position:relative;
+  width:100%;
+  height: 100%;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+html,
+#root,
+.background{
+  height: 100%;
+}
+
+/*---------------------------------------*/
+/*---------RESPONSIVENESS----------------*/
+
+/* @media screen and (max-width: 1590px) {
+  body {
+    margin: 25px 350px
+  }
+}
+
+
+@media screen and (max-width: 1300px) {
+  body {
+    margin: 25px 200px
+  }
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    margin: 25px 90px
+  }
+} */
+
+.pokeGrid{
+  display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: stretch;
+	align-content: flex-start;
+
+}
+
+/*---------------------------------------*/
+/*---------BACKGROUND COLORS-------------*/
+/* .black{
+  display: flex;
+  justify-content: space-between;
+}
+
+.black div:nth-of-type(1){
+  position: static;
+  width: 0;
+  height: 0;
+  border-top: 100px solid #000000;
+  border-right: 100px solid transparent;
+}
+
+.black div:nth-of-type(2){
+  width: 0;
+  height: 0;
+  border-top: 100px solid #000000;
+  border-left: 100px solid transparent;
+}
+
+.red{
+  height:100%;
+  display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: flex-end;
+	
+}
+.red div:nth-of-type(1){
+  border-top-right-radius: 150%;
+  background-color: #F62D14;
+  width: 100px;
+  height: 100px;
+}
+.red div:nth-of-type(2){
+  border-top-left-radius: 150%;
+  background-color: #F62D14;
+  width: 100px;
+  height: 100px;
+}
+
+
+/*---------------------------------------*/
+/* --------------POKEMON CARDS-----------*/
+.poke-list{
+  margin-left: 250px;
+  margin-right: 250px;
+} 
+.card {
+  width: 200px;
+  margin-top: 50px;
+  margin-right: 40px;
+} 
+
+.pokeImg{
+  width: 100px
+}
+
+.image {
+  background-color: #dfdfdf;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  display: flex;
+	flex-direction: column;
+	
+	justify-content: center;
+	align-items: center;
+	
+  /* padding: 50px; */
+}
+
+.details {
+  padding: 2px 16px;
+  background-color: white;
+}
+
+.type {
+  border: 1px solid #65352b;
+  color: #65352b;
+  padding: 2px;
+  margin-right: 5px;
+  border-radius: 10px;
+} 
+
+.poke-id{
+  margin-right: 147px;
+  padding: 3px 10px;
+  color: #65352b;
+  background-color:#ced0c5;
+  font-size: 13px;
+}
+
+.poke-evolution{
+  border-left: 3px solid #65352b;
+  padding-left: 10px;
+}
+
+/*---------------------------------------*/
+/* --------------PIKACHU GIF-------------*/
+
+.pikachu-running img{
+  width: 200px;  
+}
+.pikachu-running{
+  display: flex;
+  justify-content: center  
+} 
+
+/*---------------------------------------*/
+/*--------------SEARCH BAR---------------*/
+.search-bar{
+  display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: stretch;
+	align-content: stretch;
+}
+
+.search-bar input{
+  width: 100%;
+  border: none;
+  border-radius: 4px;
+  margin: 8px 0;
+  outline: none;
+  padding: 8px;
+  box-sizing: border-box;
+  transition: .3s;
+  background-color: #dbdbdb
+}
+
+.search-bar input:focus{
+  border-color: #811E09;
+  box-shadow: 0 0 8px 0 #811E09;
+}
+
+::placeholder{
+  text-align: center;
+  font-size: 17px;
+} 
+
+
+/* Large Devices, Wide Screens
+@media only screen and (max-width : 1200px) {
+
+}
+
+/* Medium Devices, Desktops */
+/* @media only screen and (max-width : 992px) {
+
+} */
+
+/* Small Devices, Tablets */
+/* @media only screen and (max-width : 768px) {
+
+} */
+
+/* Extra Small Devices, Phones */ 
+/* @media only screen and (max-width : 480px) {
+
+} */
+
+/* Custom, iPhone Retina */ 
+/* @media only screen and (max-width : 320px) {
+
+} */ 
