@@ -20,7 +20,7 @@ router.get('/allPokemon', (req, res) =>{
 router.get('/pokemon/:pokemonId', (req, res) =>{
     let pokeId = req.params.pokemonId
 
-    axios.get(`https://pokeapi.co/api/v2/pokemon-species/${pokeId}/`)
+    axios.get(`https://pokeapi.co/api/v2/pokemon/${pokeId}/`)
         .then((result) => {
             res.json(result.data)
         })

@@ -8,10 +8,11 @@ class PokemonList extends React.Component {
 
     state = {
         pokemon: [],
-        filteredPokemon: []
+        filteredPokemon: [],
       }
     
       componentDidMount(){
+        console.log('PRIMER COMPONENT')
         axios.get('http://localhost:5005/api/allPokemon')
           .then((result) =>{
             this.setState({

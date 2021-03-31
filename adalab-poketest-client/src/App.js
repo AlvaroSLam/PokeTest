@@ -26,7 +26,7 @@ class App extends React.Component {
 
         <Switch>          
           <Route path='/pokemon/:pokemonId' render={(routeProps) =>{
-            return <PokeCard />
+            return <PokeCard {...routeProps}/>
           }}/>
         </Switch>
 
