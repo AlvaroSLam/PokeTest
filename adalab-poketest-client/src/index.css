@@ -43,24 +43,31 @@ html,
 /*---------------------------------------*/
 /*---------RESPONSIVENESS----------------*/
 
-/* @media screen and (max-width: 1590px) {
-  body {
-    margin: 25px 350px
-  }
+@media screen and (max-width: 3000px) {
+ 
+  .poke-list{
+    margin-left: 250px;
+  margin-right: 250px;
+  } 
+
+  ::placeholder{
+    text-align: center;
+    font-size: 17px;
+  } 
 }
 
+@media screen and (max-width: 980px) {
+ 
+  .poke-list{
+    margin-left: 50px;
+    margin-right: 50px;
+  } 
 
-@media screen and (max-width: 1300px) {
-  body {
-    margin: 25px 200px
-  }
+  ::placeholder{
+    text-align: center;
+    font-size: 15px;
+  } 
 }
-
-@media screen and (max-width: 800px) {
-  body {
-    margin: 25px 90px
-  }
-} */
 
 .pokeGrid{
   display: flex;
@@ -119,10 +126,7 @@ html,
 
 /*---------------------------------------*/
 /* --------------POKEMON CARDS-----------*/
-.poke-list{
-  margin-left: 250px;
-  margin-right: 250px;
-} 
+
 .card {
   width: 200px;
   margin-top: 50px;
@@ -145,7 +149,6 @@ html,
 	justify-content: center;
 	align-items: center;
 	
-  /* padding: 50px; */
 }
 
 .details {
@@ -226,10 +229,7 @@ html,
   box-shadow: 0 0 8px 0 #811E09;
 }
 
-::placeholder{
-  text-align: center;
-  font-size: 17px;
-} 
+
 
 /*---------------------------------------*/
 /*--------------POKE CARD---------------*/
@@ -260,28 +260,4 @@ html,
   text-transform: uppercase;
   font-weight: bolder;
 }
-
-/* Large Devices, Wide Screens
-@media only screen and (max-width : 1200px) {
-
-}
-
-/* Medium Devices, Desktops */
-/* @media only screen and (max-width : 992px) {
-
-} */
-
-/* Small Devices, Tablets */
-/* @media only screen and (max-width : 768px) {
-
-} */
-
-/* Extra Small Devices, Phones */ 
-/* @media only screen and (max-width : 480px) {
-
-} */
-
-/* Custom, iPhone Retina */ 
-/* @media only screen and (max-width : 320px) {
-
-} */ 
+ 
