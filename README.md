@@ -10,10 +10,10 @@ Descargarse tanto el server como el client y en cada uno abrir un terminal difer
 
     npm install
 
-Una vez instaladados, en el terminal del SERVER introducir
+Una vez instaladados, en el **terminal del Server** introducir
 
     npm run dev
     
-Y en el terminal del cliente introducir
+Y en el **terminal del Cliente** introducir
 
     npm start
