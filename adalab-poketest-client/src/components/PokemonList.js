@@ -1,18 +1,21 @@
 import React from 'react'
 import PokeDetail from './PokeDetail'
 import PokeSearch from './PokeSearch'
+import PokeEvolve from './PokeEvolve'
 import axios from 'axios'
 import PikachuRunning from '../pikachu_running.gif'
+
+
 
 class PokemonList extends React.Component {
 
     state = {
         pokemon: [],
         filteredPokemon: [],
+        pokeEvolution: []
       }
     
       componentDidMount(){
-        console.log('PRIMER COMPONENT')
         axios.get('http://localhost:5005/api/allPokemon')
           .then((result) =>{
             this.setState({
@@ -23,6 +26,15 @@ class PokemonList extends React.Component {
           .catch((err) =>{
             console.log('Error while fetching', err)
           })
+
+          axios.get('http://localhost:5005/api/pokemonEvolution')
+            .then((result) =>{
+                this.setState({
+                    pokeEvolution: result.data
+                })
+            })
+            .catch(err => console.log(err))
+
       }
 
       handleChange = (event) => {
@@ -37,7 +49,8 @@ class PokemonList extends React.Component {
       }
 
     render(){
-        const {pokemon, filteredPokemon} = this.state
+        const {pokemon, filteredPokemon, pokeEvolution} = this.state
+        
         if(!pokemon.length){
             return (
               <>
@@ -55,16 +68,26 @@ class PokemonList extends React.Component {
         <PokeSearch onChange={this.handleChange}/>
         <div className='pokeGrid'>
        {
-            filteredPokemon.map((elem) =>{
-                return <PokeDetail 
+            filteredPokemon.map((elem, index) =>{
+                return (
+                  <div>
+                  <PokeDetail 
                   key={elem.id} 
                   name={elem.name} 
                   image={elem.sprites.front_default} 
                   id={elem.id} 
                   types={elem.types}
                   />
+
+                  <PokeEvolve 
+                    name={elem.name}
+                    evolution={pokeEvolution}
+                  />
+                  </div>
+                )
             })
         }
+        
         </div>
         
         </>

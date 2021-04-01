@@ -4,7 +4,7 @@ const axios =  require('axios')
 
 //--------Get the information af all the pokemons-------------//
 router.get('/allPokemon', (req, res) =>{
-    axios.get("https://pokeapi.co/api/v2/pokemon?limit=20")
+    axios.get("https://pokeapi.co/api/v2/pokemon")
     .then((res) => {
       return res.data.results
     })

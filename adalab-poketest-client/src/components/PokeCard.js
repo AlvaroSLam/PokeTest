@@ -31,19 +31,20 @@ class Pokecard extends React.Component {
 
         return (
             <div>
-                <Link to='/' style={{ textDecoration: 'none' }}>Return to Home Page</Link> 
+                
 
                 <div className='poke-card'>
                 <img src={pokemon.sprites.other.dream_world.front_default} alt='poke-img' />
                 <div>
-                    <h1>{pokemon.name.toUpperCase()}</h1>
+                    <h1>{pokemon.id}. {pokemon.name.toUpperCase()}</h1>
                     <p><em>Height: {pokemon.height}</em> // <em>Weight: {pokemon.weight}</em></p>
                     <h3>Abilities</h3>
                     {
-                        pokemon.abilities.map((elem) =>{
-                            return <p>{elem.ability.name[0].toUpperCase() + elem.ability.name.slice(1)}</p>
+                        pokemon.abilities.map((elem, index) =>{
+                            return <p> <b>{index+1}.</b> {elem.ability.name[0].toUpperCase() + elem.ability.name.slice(1)}</p>
                         })
                     } 
+                    <Link to='/' className='back-home'>Return to Home Page</Link> 
                 </div>
                 
                 </div> 
