@@ -9,15 +9,16 @@ class App extends React.Component {
   render(){
     return (
       <div className='background'>
-        {/* <div className='black'>
-        <div></div>
-        <div></div>
-        </div> */}
       
-        {/* <div className='red'>
+        <div className='black'>
+        <div></div>
+        <div></div>
+        </div>
+      
+        <div className='red'>
           <div></div>
           <div></div>
-        </div> */}
+        </div>
         
       
         <div className='poke-list'>

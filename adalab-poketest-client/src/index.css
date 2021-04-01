@@ -34,11 +34,6 @@ code {
     monospace;
 }
 
-html,
-#root,
-.background{
-  height: 100%;
-}
 
 /*---------------------------------------*/
 /*---------RESPONSIVENESS----------------*/
@@ -81,46 +76,53 @@ html,
 
 /*---------------------------------------*/
 /*---------BACKGROUND COLORS-------------*/
-/* .black{
+
+.black{
+  position: fixed;
+  width: 100vw;
   display: flex;
   justify-content: space-between;
+  position: fixed;
 }
 
 .black div:nth-of-type(1){
   position: static;
   width: 0;
   height: 0;
-  border-top: 100px solid #000000;
-  border-right: 100px solid transparent;
+  border-top: 80px solid #000000;
+  border-right: 80px solid transparent;
 }
 
 .black div:nth-of-type(2){
   width: 0;
   height: 0;
-  border-top: 100px solid #000000;
-  border-left: 100px solid transparent;
+  border-top: 80px solid #000000;
+  border-left: 80px solid transparent;
 }
 
 .red{
-  height:100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
   display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: flex-end;
-	
+	 
 }
 .red div:nth-of-type(1){
   border-top-right-radius: 150%;
   background-color: #F62D14;
-  width: 100px;
-  height: 100px;
+  width: 70px;
+  height: 70px;
 }
 .red div:nth-of-type(2){
   border-top-left-radius: 150%;
   background-color: #F62D14;
-  width: 100px;
-  height: 100px;
+  width: 70px;
+  height: 70px;
 }
 
 
@@ -189,6 +191,16 @@ html,
   margin: 0
 }
 
+.poke-id-link{
+  text-decoration: none; 
+  color: #000000
+}
+
+.poke-id-link:hover{
+  text-decoration: underline;
+  color: #811E09
+}
+
 /*---------------------------------------*/
 /* --------------PIKACHU GIF-------------*/
 
@@ -216,7 +228,7 @@ html,
   width: 100%;
   border: none;
   border-radius: 4px;
-  margin: 8px 0;
+  margin: 70px 0 0 0;
   outline: none;
   padding: 8px;
   box-sizing: border-box;
@@ -259,5 +271,12 @@ html,
   font-size: 16px;
   text-transform: uppercase;
   font-weight: bolder;
+  background-color: #ced0c5;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.back-home:hover{
+  background-color: #999999;
 }
  

@@ -36,7 +36,7 @@ class Pokecard extends React.Component {
                 <div className='poke-card'>
                 <img src={pokemon.sprites.other.dream_world.front_default} alt='poke-img' />
                 <div>
-                    <h1>{pokemon.id}. {pokemon.name.toUpperCase()}</h1>
+                    <h1>ID {pokemon.id}. {pokemon.name[0].toUpperCase() + pokemon.name.slice(1)}</h1>
                     <p><em>Height: {pokemon.height}</em> // <em>Weight: {pokemon.weight}</em></p>
                     <h3>Abilities</h3>
                     {

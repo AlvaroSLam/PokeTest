@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import axios from 'axios'
+
 
 
 class PokeDetail extends React.Component {
@@ -19,7 +19,7 @@ class PokeDetail extends React.Component {
                 </div>
 
                 <div className='details'>                
-                    <Link to={`/pokemon/${id}`} style={{ textDecoration: 'none', color: '#000000' }}><h3>{name[0].toUpperCase() + name.slice(1)}</h3></Link>
+                    <Link to={`/pokemon/${id}`} className='poke-id-link'><h3>{name[0].toUpperCase() + name.slice(1)}</h3></Link>
                     {
                         types.map((elem, index) =>{
                             return <span key={index} className='type'>{elem.type.name}</span>
