@@ -1,8 +1,7 @@
-# PokeTest-Adalab
+# PokeTest
 
-Esta es mi prueba para el proceso de selección para profesor de fullstack en la Escuela Adalab.
 
-Para ello he creado un **server API en NodeJS + Express** con una serie de endpoints tomados de PokeApi que suministran la información al **Client** creado con React.js
+**Server API en NodeJS + Express** con una serie de endpoints tomados de PokeApi que suministran la información al **Client** creado con React.js
 
 # Intrucciones
 
